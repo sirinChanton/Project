@@ -1,0 +1,103 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = null; // ถ้าไม่อยากใช้ Navbar
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .container {
+            width: 360px;
+            text-align: center;
+        }
+
+        .logo-box {
+            background: #e0e0e0;
+            border-radius: 30px;
+            padding: 45px 0;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        .register-form input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border-radius: 16px;
+            border: none;
+            background: #3d7ec1;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .register-form input::placeholder {
+            color: #eaf1fb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 25px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        .btn-register {
+            background: white;
+            color: #3d7ec1;
+            border: 2px solid #3d7ec1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="logo-box">
+            LOGO
+        </div>
+
+        <form asp-controller="Login" asp-action="login" method="post" class="register-form">
+
+            <input type="text" name="FullName" placeholder="Name Lastname" required />
+            <input type="tel" name="Tel" placeholder="Tel." required />
+            <input type="email" name="Email" placeholder="E-mail" required />
+            <input type="text" name="Username" placeholder="Username" required />
+            <input type="password" name="Password" placeholder="Password" required />
+
+            <hr />
+
+            <button type="submit" class="btn btn-register">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+</body>
+</html>

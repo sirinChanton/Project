@@ -1,0 +1,253 @@
+@{
+    Layout = "../../Views/Shared/_Navbar.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Layout */
+        .wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+               * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            @* font-family: 'Tahoma', sans-serif; *@
+        }
+
+        /* Main Navbar */
+        .navbar {
+            background-color: #0A7EC6;
+            /* สีเหลือง/ส้ม สไตล์ร้านอุปกรณ์ช่าง */
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        /* ช่องค้นหา (Search Bar) */
+        .search-container {
+            flex-grow: 1;
+            margin: 0 30px;
+            display: flex;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* เมนูลิงก์ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #0A7EC6; /* สีฟ้าเหมือนในภาพ */
+    padding-top: 20px;
+}
+
+/* Menu */
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 18px 20px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Hover */
+.sidebar-menu a:hover {
+    background-color: #0A7EC6;
+}
+
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #e0e0e0;
+        }
+
+        /* Add button */
+        .add-btn {
+            font-size: 28px;
+            padding: 5px 15px;
+            border-radius: 50%;
+            border: none;
+            background: #3d7ec1;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Form box */
+        .form-box {
+            margin-top: 25px;
+            border: 1px solid #333;
+            padding: 20px;
+            width: 350px;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-box button {
+            padding: 10px 20px;
+            background: #3d7ec1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+
+  
+
+    <!-- Content -->
+    <div class="content">
+
+        <div class="top-bar">
+            <h2>Manage user</h2>
+            <button class="add-btn" onclick="toggleForm()">+</button>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Username</th>
+                    <th>Tel.</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>admin</td>
+                    <td>081-xxx-xxxx</td>
+                    <td>admin@mail.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add User Form -->
+        <div class="form-box" id="addForm" style="display:none;">
+            <h3>Add User</h3>
+
+            <form asp-controller="Account" asp-action="AddUser" method="post">
+                <input type="text" name="Username" placeholder="Username" required />
+               <select name="Role" class="form-control form-select"required>
+                <option value="" disabled selected>เลือก Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Seller">Seller</option>
+                <option value="User">User</option>
+            </select>
+            <br />
+                <input type="tel" name="Tel" placeholder="Tel." required />
+                <input type="email" name="Email" placeholder="E-mail" required />
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleForm() {
+        const form = document.getElementById("addForm");
+        form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>

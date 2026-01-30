@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    @* สิ่งนี้เอาไว้สร้าง Navbar ร่วมกันในหลายๆ หน้า *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            @* font-family: 'Tahoma', sans-serif; *@
+        }
+
+        /* Main Navbar */
+        .navbar {
+            background-color: #0A7EC6;
+            /* สีเหลือง/ส้ม สไตล์ร้านอุปกรณ์ช่าง */
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        /* ช่องค้นหา (Search Bar) */
+        .search-container {
+            flex-grow: 1;
+            margin: 0 30px;
+            display: flex;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* เมนูลิงก์ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #0A7EC6; /* สีฟ้าเหมือนในภาพ */
+    padding-top: 20px;
+}
+
+/* Menu */
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 18px 20px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Hover */
+.sidebar-menu a:hover {
+    background-color: #0A7EC6;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+
+
+        /* เมนูหมวดหมู่สินค้า (Secondary Nav) */
+        .category-nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 5%;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            /* สำหรับมือถือ */
+        }
+
+        .category-nav a {
+            text-decoration: none;
+            color: #555;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .category-nav a:hover {
+            color: #f8b400;
+        }
+
+        .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo img {
+    height: 55px;       /* ปรับขนาดโลโก้ */
+    width: auto;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+    </style>
+</head>
+
+<body>
+<!-- Navbar ด้านบน -->
+<nav class="navbar">
+    <a href="/" class="logo">
+        <img src="~/images/egg-mystery-logo.png" alt="Egg Mystery Store">
+    </a>
+
+    <div class="search-container">
+        <input type="text" placeholder="ค้นหาสินค้า...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+  <ul class="nav-links">
+    <li>
+        <a href="/Login/login">
+            <i class="fa-solid fa-circle-user"></i>
+        </a>
+    </li>
+</ul>
+
+</nav>
+
+<!-- Layout ใต้ Navbar -->
+<div class="layout">
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Confirm Seller</a></li>
+            <li><a href="/Manager/Manage_User">Manage user</a></li>
+            <li><a href="/Account/Lab4">Promotion</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        @RenderBody()
+    </main>
+</div>
+
+
+    <div>
+    @RenderBody()
+    </div>
+</body>
+
+
+</html>
