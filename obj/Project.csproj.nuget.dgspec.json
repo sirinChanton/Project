@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sirinchanton/402 /Project/Project.csproj": {}
+    "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj": {}
   },
   "projects": {
-    "/Users/sirinchanton/402 /Project/Project.csproj": {
+    "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sirinchanton/402 /Project/Project.csproj",
+        "projectUniqueName": "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj",
         "projectName": "Project",
-        "projectPath": "/Users/sirinchanton/402 /Project/Project.csproj",
+        "projectPath": "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj",
         "packagesPath": "/Users/sirinchanton/.nuget/packages/",
-        "outputPath": "/Users/sirinchanton/402 /Project/obj/",
+        "outputPath": "/Users/sirinchanton/Documents/GitHub/Project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sirinchanton/.nuget/NuGet/NuGet.Config"
