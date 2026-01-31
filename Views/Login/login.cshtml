@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>@ViewData["Title"]</title>
@@ -24,17 +25,19 @@
         }
 
         .container {
-            width: 360px;
+            width: 320px;
             text-align: center;
         }
 
+        .logo-box img {
+            width: 120px;
+            height: auto;
+        }
+
         .logo-box {
-            background: #e0e0e0;
-            border-radius: 30px;
-            padding: 45px 0;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .login-form input {
@@ -84,25 +87,24 @@
 <body>
     <div class="container">
         <div class="logo-box">
-            LOGO
+            <img src="~/images/egg-mystery-logo.png" alt="">
         </div>
 
-       <form asp-action="Lab4" asp-controller="Account" method="post" class="login-form">
-    <input type="text" name="Username" placeholder="Username" required />
-    <input type="password" name="Password" placeholder="Password" required />
+        <form asp-action="Lab4" asp-controller="Account" method="post" class="login-form">
+            <input type="text" name="Username" placeholder="Username" required />
+            <input type="password" name="Password" placeholder="Password" required />
 
-    <hr />
+            <hr />
 
-    <button type="submit" class="btn btn-login">Login</button>
-</form>
+            <button type="submit" class="btn btn-login">Login</button>
+        </form>
 
-<a asp-controller="Register"
-   asp-action="Register"
-   class="btn btn-register"
-   style="text-decoration:none; display:inline-block;">
-    Register
-</a>
+        <a asp-controller="Register" asp-action="Register" class="btn btn-register"
+            style="text-decoration:none; display:inline-block;">
+            Register
+        </a>
 
     </div>
 </body>
+
 </html>
