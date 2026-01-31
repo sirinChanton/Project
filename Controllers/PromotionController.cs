@@ -4,9 +4,9 @@ using Project.Models;
 
 namespace Project.Controllers;
 
-public class DashboardController : Controller
+public class PromotionController : Controller
 {
-    public IActionResult Dash_Board()
+    public IActionResult Promotion_Page()
     {
         return View();
     }

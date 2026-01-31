@@ -4,10 +4,11 @@ using Project.Models;
 
 namespace Project.Controllers;
 
-public class DashboardController : Controller
+public class ConfirmSellerController : Controller
 {
-    public IActionResult Dash_Board()
+    public IActionResult Confirm_Seller()
     {
         return View();
     }
 }
+

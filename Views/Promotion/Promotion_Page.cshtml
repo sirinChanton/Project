@@ -1,0 +1,89 @@
+@{
+    Layout = "_Navbar";
+    ViewData["Title"] = "Promotion";
+}
+
+<style>
+    .promotion-page {
+        padding: 20px;
+    }
+
+    .promotion-page h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .promo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .promo-card {
+        position: relative;
+        border: 2px solid #000;
+        border-radius: 30px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: bold;
+        background: #fff;
+    }
+
+    .promo-toggle {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        padding: 6px 18px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .toggle-on {
+        background-color: #3b7ddd;
+    }
+
+    .toggle-off {
+        background-color: #c0392b;
+    }
+
+    /* responsive 
+    (max-width: 768px) {
+        .promo-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    */
+</style>
+
+<div class="promotion-page">
+    <h1>Promotion</h1>
+
+    <div class="promo-grid">
+
+        <!-- Promotion 1 -->
+        <div class="promo-card">
+            ลด 10%
+            <button class="promo-toggle toggle-on">on</button>
+        </div>
+
+        <!-- Promotion 2 -->
+        <div class="promo-card">
+            ซื้อครบ 20,000 ฿ ลด 5000 ฿
+            <button class="promo-toggle toggle-off">off</button>
+        </div>
+
+        <!-- Promotion 3 -->
+        <div class="promo-card">
+            1 แถม 1
+            <button class="promo-toggle toggle-on">on</button>
+        </div>
+
+    </div>
+</div>

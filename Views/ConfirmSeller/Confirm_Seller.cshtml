@@ -1,0 +1,94 @@
+@{
+    Layout = "_Navbar";
+    ViewData["Title"] = "Confirm Seller";
+}
+
+<div class="content">
+
+    <div class="top-bar">
+        <h2>Confirm Seller</h2>
+    </div>
+
+   <style>
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #e0e0e0;
+}
+
+.confirm-btn {
+    padding: 6px 14px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+   </style>
+
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Username</th>
+                <th>Tel.</th>
+                <th>E-mail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- ตัวอย่าง row -->
+            <tr>
+                <td>1</td>
+                <td>seller01</td>
+                <td>089-xxx-xxxx</td>
+                <td>seller01@mail.com</td>
+                <td>
+                    <form asp-controller="Seller"
+                          asp-action="Confirm"
+                          method="post"
+                          style="display:inline;">
+                        <input type="hidden" name="username" value="seller01" />
+                        <button type="submit" class="confirm-btn">
+                            Confirm
+                        </button>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>seller02</td>
+                <td>082-xxx-xxxx</td>
+                <td>seller02@mail.com</td>
+                <td>
+                    <form asp-controller="Seller"
+                          asp-action="Confirm"
+                          method="post"
+                          style="display:inline;">
+                        <input type="hidden" name="username" value="seller02" />
+                        <button type="submit" class="confirm-btn">
+                            Confirm
+                        </button>
+                    </form>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>

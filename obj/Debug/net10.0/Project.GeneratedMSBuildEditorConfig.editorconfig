@@ -26,8 +26,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9MYWI0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/sirinchanton/Documents/GitHub/Project/Views/Dashboard/DashBoard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0Rhc2hCb2FyZC5jc2h0bWw=
+[/Users/sirinchanton/Documents/GitHub/Project/Views/ConfirmSeller/Confirm_Seller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29uZmlybVNlbGxlci9Db25maXJtX1NlbGxlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sirinchanton/Documents/GitHub/Project/Views/Dashboard/Dash_Board.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0Rhc2hfQm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sirinchanton/Documents/GitHub/Project/Views/Home/Index.cshtml]
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/sirinchanton/Documents/GitHub/Project/Views/Manager/Manage_User.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9NYW5hZ2VfVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sirinchanton/Documents/GitHub/Project/Views/Promotion/Promotion_Page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvbW90aW9uL1Byb21vdGlvbl9QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sirinchanton/Documents/GitHub/Project/Views/Register/Register.cshtml]
