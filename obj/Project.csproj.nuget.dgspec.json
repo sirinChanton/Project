@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj": {}
+    "D:\\Project\\Project.csproj": {}
   },
   "projects": {
-    "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj": {
+    "D:\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj",
+        "projectUniqueName": "D:\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "/Users/sirinchanton/Documents/GitHub/Project/Project.csproj",
-        "packagesPath": "/Users/sirinchanton/.nuget/packages/",
-        "outputPath": "/Users/sirinchanton/Documents/GitHub/Project/obj/",
+        "projectPath": "D:\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\usEr\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sirinchanton/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\usEr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
