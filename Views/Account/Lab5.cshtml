@@ -1,0 +1,46 @@
+@{
+    Layout = "../../Views/Shared/_Navbar.cshtml";
+}
+@model Project.ViewModels.LabUserViewModel 
+@* @model List<Project.ViewModels.LabUserViewModel> *@
+
+<h1>LAB 5</h1>
+
+ <div>
+    @Model.UserID <br>
+    @Model.Name <br>
+    @Model.Lastname <br>
+    @Model.Age <br>
+    @Model.Weight <br>
+    @Model.Height <br>  
+
+    @* <table>
+        <thead class="table table-bordered">
+            <tr>
+                <th>UserID</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.UserID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Lastname</td>
+                    <td>@item.Weight</td>
+                    <td>@item.Height</td>
+                    <td>@item.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table> *@
+
+</div> 
+
+
+

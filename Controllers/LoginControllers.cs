@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Project.Models;
+using Project.ViewModels;
 
 namespace Project.Controllers
 {
@@ -15,16 +16,9 @@ namespace Project.Controllers
 
         // รับค่าจากฟอร์ม Login
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login(LabUserViewModel model)
         {
-            // ตัวอย่าง logic login
-            if (username == "admin" && password == "1234")
-            {
-                return RedirectToAction("Lab4", "Home");
-            }
-
-            ViewBag.Error = "Username หรือ Password ไม่ถูกต้อง";
-            return View();
+            return RedirectToAction("Dash_Board","Dashboard", new { username = model.Username,password = model.Password });
         }
 
         // หน้า Error

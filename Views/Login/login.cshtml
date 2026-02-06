@@ -1,6 +1,9 @@
 @{
     ViewData["Title"] = "Login";
 }
+@model Project.ViewModels.LabUserViewModel
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,9 +93,9 @@
             <img src="~/images/egg-mystery-logo.png" alt="">
         </div>
 
-        <form asp-action="Dash_Board" asp-controller="Dashboard" method="post" class="login-form">
-            <input type="text" name="Username" placeholder="Username" required />
-            <input type="password" name="Password" placeholder="Password" required />
+        <form asp-action="Dash_board" asp-controller="Dashboard" method="post" class="login-form">
+            <input type="text" asp-for="Username" name="Username" placeholder="Username" required />
+            <input type="password" asp-for="Password" name="Password" placeholder="Password" required />
 
             <hr />
 

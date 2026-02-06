@@ -17,7 +17,6 @@ namespace Project.Controllers
     {
         // TODO: บันทึกข้อมูลลง DB
         // ตอนนี้สมมติว่าลงทะเบียนสำเร็จ
-
         return RedirectToAction("Login");
     }
 }
